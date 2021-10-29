@@ -1,0 +1,33 @@
+﻿<Window x:Class="lobzaeva_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lobzaeva_3"
+        mc:Ignorable="d"
+        Title="Практическая работа №3" Height="429" Width="316">
+    <Grid>
+
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Команды">
+                <MenuItem Header="Заполнить" Click="Fill_Click"/>
+                <MenuItem Header="Рассчитать" Click="Solve_Click"/>
+                <MenuItem Header="Очистить" Click="TextBoxesClear"/>
+                <MenuItem Header="Сохранить" Click="SaveMas"/>
+                <MenuItem Header="Открыть" Click="openMas"/>
+                <MenuItem Header="Выход" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="О программе" Click="Info_Click"/>
+        </Menu>
+        <Label Content="Количество строк:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,189,0,0" Height="30" Width="142"/>
+        <TextBox x:Name="inputM" Text="" PreviewTextInput="inputNumber_TextChanged" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="162,189,0,0" Height="30" Width="107"/>
+        <Label Content="Количество столбцов:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,224,0,0" Height="30" Width="142"/>
+        <TextBox x:Name="inputN" Text="" PreviewTextInput="inputNumber_TextChanged" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="162,224,0,0" Height="30" Width="107"/>
+        <Button Content="Рассчитать" Click="Solve_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,269,0,0" Height="30" Width="107"/>
+        <Button Content="Заполнить" Click="Fill_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="162,269,0,0" Height="30" Width="107"/>
+        <Label Content="Сгенерированные числа:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,304,0,0" Height="30" Width="150"/>
+        <DataGrid x:Name="dataGrid" CellEditEnding="dataGrid_CellEditEnding" CanUserAddRows="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="137" Margin="10,37,0,0" Width="259"/>
+        <TextBox x:Name="rezultNumbers" Text="" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True" Margin="15,334,0,0" Height="40" Width="254"/>
+    </Grid>
+</Window>
+
